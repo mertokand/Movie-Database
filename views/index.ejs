@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Uygulaması</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 10px 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 16px;
+        }
+        nav ul li a:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        nav ul li a:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hoş Geldiniz</h1>
+        <nav>
+            <ul>
+                <li><a href="/add_movie">Film Ekle</a></li>
+                <li><a href="/list_movies">Filmleri Listele</a></li>
+                <li><a href="/update_movie">Film Güncelle</a></li>
+                <li><a href="/add_entries">Spesifik Veri Ekleme</a></li> 
+                <li><a href="/execute_sql">SQL Kodu ile Veri Ekleme</a></li>
+                <li><a href="/user_query">Kullanıcı Sorgusu</a></li>
+                <li><a href="/advanced_queries">Gelişmiş Sorgular</a></li>
+                <li><a href="/list_ids_names">Bütün ID'ler</a></li>
+                <li><a href="/delete_movie">Film Sil</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

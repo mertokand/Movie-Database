@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID ve İsimler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 20px;
+        }
+        li {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .home-link {
+            display: block;
+            margin-top: 20px;
+            color: #333;
+            text-decoration: none;
+        }
+        .home-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ID ve İsimler</h1>
+
+        <h2>Filmler</h2>
+        <ul>
+            <% films.forEach(function(film) { %>
+                <li>ID: <%= film.FilmID %> - Adı: <%= film.FilmAdi %></li>
+            <% }); %>
+        </ul>
+
+        <h2>Oyuncular</h2>
+        <ul>
+            <% actors.forEach(function(actor) { %>
+                <li>ID: <%= actor.OyuncuID %> - Adı: <%= actor.Ad %> - Soyadı: <%= actor.Soyad %></li>
+            <% }); %>
+        </ul>
+
+        <h2>Müzisyenler</h2>
+        <ul>
+            <% musicians.forEach(function(musician) { %>
+                <li>ID: <%= musician.MuzisyenID %> - Adı: <%= musician.Ad %> - Soyadı: <%= musician.Soyad %></li>
+            <% }); %>
+        </ul>
+
+        <h2>Yapımcılar</h2>
+        <ul>
+            <% producers.forEach(function(producer) { %>
+                <li>ID: <%= producer.YapimciID %> - Adı: <%= producer.Ad %> - Soyadı: <%= producer.Soyad %></li>
+            <% }); %>
+        </ul>
+
+        <h2>Yönetmenler</h2>
+        <ul>
+            <% directors.forEach(function(director) { %>
+                <li>ID: <%= director.YonetmenID %> - Adı: <%= director.Ad %> - Soyadı: <%= director.Soyad %></li>
+            <% }); %>
+        </ul>
+
+        <h2>Çekim Yerleri</h2>
+        <ul>
+            <% shootingPlaces.forEach(function(place) { %>
+                <li>ID: <%= place.CekimYeriID %> - Adı: <%= place.YerAdi %></li>
+            <% }); %>
+        </ul>
+
+        <a href="/" class="home-link">Anasayfa</a>
+    </div>
+</body>
+</html>

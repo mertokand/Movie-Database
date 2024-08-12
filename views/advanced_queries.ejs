@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelişmiş Sorgular</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 16px;
+        }
+        ul li a:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        ul li a:active {
+            transform: scale(0.95);
+        }
+        .home-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .home-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gelişmiş Sorgular</h1>
+        <ul>
+            <li><a href="/query1">En Son Eklenen Filmler</a></li>
+            <li><a href="/query2">Aktörlerin Oynadığı Filmler</a></li>
+            <li><a href="/query3">Filmlerin Çekim Yerleri</a></li>
+            <li><a href="/query4">Müzisyenlerin Çalıştığı Filmler</a></li>
+            <li><a href="/query5">Yapımcıların Yönettiği Filmler</a></li>
+        </ul>
+        <a href="/" class="home-link">Anasayfa</a>
+    </div>
+</body>
+</html>

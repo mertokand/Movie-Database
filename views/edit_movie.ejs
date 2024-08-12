@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Film Güncelle</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Film Güncelle</h1>
+    <form action="/edit_movie/<%= movie.FilmID %>" method="POST">
+        <label for="filmAdi">Film Adı:</label>
+        <input type="text" name="filmAdi" value="<%= movie.FilmAdi %>" required><br>
+        <label for="cekimTarihi">Çekim Tarihi:</label>
+        <input type="date" name="cekimTarihi" value="<%= movie.CekimTarihi %>" required><br>
+        <label for="cekimYeriID">Çekim Yeri ID:</label>
+        <input type="number" name="cekimYeriID" value="<%= movie.CekimYeriID %>" required><br>
+        <label for="turID">Tür ID:</label>
+        <input type="number" name="turID" value="<%= movie.TurID %>" required><br>
+        <label for="yonetmenID">Yönetmen ID:</label>
+        <input type="number" name="yonetmenID" value="<%= movie.YonetmenID %>" required><br>
+        <label for="yapimciID">Yapımcı ID:</label>
+        <input type="number" name="yapimciID" value="<%= movie.YapimciID %>" required><br>
+        <label for="muzisyenID">Müzisyen ID:</label>
+        <input type="number" name="muzisyenID" value="<%= movie.MuzisyenID %>" required><br>
+        <button type="submit">Güncelle</button>
+    </form>
+</body>
+</html>

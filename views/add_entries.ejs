@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeni Kayıtlar Ekle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            width: 100%;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="date"] {
+        width: calc(100% - 22px); /* Padding ve border değerlerini genişlikten düşerek hesaplar */
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .home-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+            text-decoration: none;
+        }
+        .home-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Yeni Kayıtlar Ekle</h1>
+        <form action="/add_entries" method="post">
+            <h2>Çekim Yeri</h2>
+            <label for="cekimYeriID">Çekim Yeri ID:</label>
+            <input type="text" id="cekimYeriID" name="cekimYeriID">
+            <label for="cekimYeriAdi">Çekim Yeri Adı:</label>
+            <input type="text" id="cekimYeriAdi" name="cekimYeriAdi">
+
+            <h2>Tür</h2>
+            <label for="turID">Tür ID:</label>
+            <input type="text" id="turID" name="turID">
+            <label for="turAdi">Tür Adı:</label>
+            <input type="text" id="turAdi" name="turAdi">
+
+            <h2>Yönetmen</h2>
+            <label for="yonetmenID">Yönetmen ID:</label>
+            <input type="text" id="yonetmenID" name="yonetmenID">
+            <label for="yonetmenAdi">Yönetmen Adı:</label>
+            <input type="text" id="yonetmenAdi" name="yonetmenAdi">
+            <label for="yonetmenSoyadi">Yönetmen Soyadı:</label>
+            <input type="text" id="yonetmenSoyadi" name="yonetmenSoyadi">
+            <label for="yonetmenDogumYeri">Yönetmen Doğum Yeri:</label>
+            <input type="text" id="yonetmenDogumYeri" name="yonetmenDogumYeri">
+            <label for="yonetmenEgitim">Yönetmen Eğitim:</label>
+            <input type="text" id="yonetmenEgitim" name="yonetmenEgitim">
+
+            <h2>Yapımcı</h2>
+            <label for="yapimciID">Yapımcı ID:</label>
+            <input type="text" id="yapimciID" name="yapimciID">
+            <label for="yapimciAdi">Yapımcı Adı:</label>
+            <input type="text" id="yapimciAdi" name="yapimciAdi">
+            <label for="yapimciSoyadi">Yapımcı Soyadı:</label>
+            <input type="text" id="yapimciSoyadi" name="yapimciSoyadi">
+            <label for="yapimciDogumTarihi">Yapımcı Doğum Tarihi:</label>
+            <input type="date" id="yapimciDogumTarihi" name="yapimciDogumTarihi">
+            <label for="yapimciDogumYeri">Yapımcı Doğum Yeri:</label>
+            <input type="text" id="yapimciDogumYeri" name="yapimciDogumYeri">
+            <label for="yapimciEgitim">Yapımcı Eğitim:</label>
+            <input type="text" id="yapimciEgitim" name="yapimciEgitim">
+
+            <h2>Müzisyen</h2>
+            <label for="muzikID">Müzisyen ID:</label>
+            <input type="text" id="muzikID" name="muzikID">
+            <label for="muzikAdi">Müzisyen Adı:</label>
+            <input type="text" id="muzikAdi" name="muzikAdi">
+            <label for="muzikSoyadi">Müzisyen Soyadı:</label>
+            <input type="text" id="muzikSoyadi" name="muzikSoyadi">
+            <label for="muzikDogumYeri">Müzisyen Doğum Yeri:</label>
+            <input type="text" id="muzikDogumYeri" name="muzikDogumYeri">
+            <label for="muzikDogumTarihi">Müzisyen Doğum Tarihi:</label>
+            <input type="date" id="muzikDogumTarihi" name="muzikDogumTarihi">
+            <label for="muzikEgitim">Müzisyen Eğitim:</label>
+            <input type="text" id="muzikEgitim" name="muzikEgitim">
+
+            <h2>Oyuncu</h2>
+            <label for="oyuncuID">Oyuncu ID:</label>
+            <input type="text" id="oyuncuID" name="oyuncuID">
+            <label for="oyuncuAdi">Oyuncu Adı:</label>
+            <input type="text" id="oyuncuAdi" name="oyuncuAdi">
+            <label for="oyuncuSoyadi">Oyuncu Soyadı:</label>
+            <input type="text" id="oyuncuSoyadi" name="oyuncuSoyadi">
+            <label for="oyuncuDogumTarihi">Oyuncu Doğum Tarihi:</label>
+            <input type="date" id="oyuncuDogumTarihi" name="oyuncuDogumTarihi">
+            <label for="oyuncuDogumYeri">Oyuncu Doğum Yeri:</label>
+            <input type="text" id="oyuncuDogumYeri" name="oyuncuDogumYeri">
+            <label for="oyuncuEgitim">Oyuncu Eğitim:</label>
+            <input type="text" id="oyuncuEgitim" name="oyuncuEgitim">
+            <br>
+
+            <button type="submit">Kaydet</button>
+        </form>
+        <br>
+        <a href="/" class="home-link">Anasayfa</a>
+    </div>
+</body>
+</html>

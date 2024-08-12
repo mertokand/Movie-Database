@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Film Ekle</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 20px;
+    box-sizing: border-box; /* Bu satır, padding ve border değerlerini genişlik ve yükseklik hesaplamalarına dahil eder */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+    width: calc(100% - 22px); /* Padding ve border değerlerini genişlikten düşerek hesaplar */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    width: calc(100% - 22px); /* Padding ve border değerlerini genişlikten düşerek hesaplar */
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.home-link {
+    display: block;
+    margin-top: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+}
+    </style>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Film Ekle</h1>
+        <form action="/add_movie" method="POST">
+            <label for="filmAdi">Film Adı:</label>
+            <input type="text" name="filmAdi" required><br>
+            <label for="cekimTarihi">Çekim Tarihi:</label>
+            <input type="date" name="cekimTarihi" required><br>
+            <label for="cekimYeriID">Çekim Yeri ID:</label>
+            <input type="number" name="cekimYeriID" required><br>
+            <label for="turID">Tür ID:</label>
+            <input type="number" name="turID" required><br>
+            <label for="yonetmenID">Yönetmen ID:</label>
+            <input type="number" name="yonetmenID" required><br>
+            <label for="yapimciID">Yapımcı ID:</label>
+            <input type="number" name="yapimciID" required><br>
+            <label for="muzisyenID">Müzisyen ID:</label>
+            <input type="number" name="muzisyenID" required><br>
+            <button type="submit">Ekle</button>
+        </form>
+        <a href="/" class="home-link">Anasayfa</a>
+    </div>
+</body>
+</html>
